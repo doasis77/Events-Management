@@ -1,0 +1,172 @@
+.calendarContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.calendarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.calendarHeader h1 {
+    color: #2c3e50;
+    margin: 0;
+}
+
+.categoryFilter {
+    padding: 0.5rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #4a5568;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.categoryFilter:hover {
+    border-color: #cbd5e0;
+}
+
+.calendarWrapper {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Override react-calendar default styles */
+.calendar {
+    width: 100% !important;
+    border: none !important;
+    padding: 1rem;
+}
+
+.tileWithEvent {
+    background: #ebf8ff !important;
+    color: #2b6cb0 !important;
+    position: relative;
+}
+
+.tileWithEvent::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #3182ce;
+    border-radius: 50%;
+}
+
+.eventsList {
+    margin-top: 2rem;
+}
+
+.eventsList h2 {
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+}
+
+.eventsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.eventCard {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.eventCard:hover {
+    transform: translateY(-2px);
+}
+
+.eventHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.eventHeader h3 {
+    margin: 0;
+    color: #2d3748;
+    font-size: 1.25rem;
+}
+
+.category {
+    background-color: #e2e8f0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.875rem;
+    color: #4a5568;
+}
+
+.eventDetails {
+    margin-bottom: 1rem;
+}
+
+.eventDetails p {
+    margin: 0.5rem 0;
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rsvpButton {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #4299e1;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.rsvpButton:hover:not(:disabled) {
+    background-color: #3182ce;
+}
+
+.rsvpButton:disabled {
+    background-color: #cbd5e0;
+    cursor: not-allowed;
+}
+
+.noEvents {
+    text-align: center;
+    color: #718096;
+    padding: 2rem;
+    background: #f7fafc;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .calendarContainer {
+        padding: 1rem;
+    }
+
+    .calendarHeader {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .eventsGrid {
+        grid-template-columns: 1fr;
+    }
+} 

@@ -1,0 +1,31 @@
+.container {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.info {
+    color: #666;
+    margin: 10px 0;
+}
+
+.rsvpButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.rsvpButton:hover {
+    background-color: #218838;
+}
