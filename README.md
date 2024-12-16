@@ -15,6 +15,9 @@ The platform simplifies event management by providing a centralized location for
 ## *Deployment Link*  
 [Campus Event Management Hub - Live](https://events-management-sand.vercel.app/)  
 
+To access the admin dash board the username:doasis33@gmail.com
+password:admin
+
 
 ---
 
@@ -143,27 +146,22 @@ The application will be accessible at:
       "email": "johndoe@example.com",  
       "password": "securepassword"  
     }  
-      
-
-#### *Event Management*  
-- 
-      
-
-- *RSVP for Event*  
-  - *Endpoint:* PATCH /api/events/:id/rsvp  
-  - *Response:*  
-    json  
-    {  
-      "message": "RSVP successful",  
-      "event": {  
-        "id": 1,  
-        "availableSeats": 49  
-      }  
-    }  
+    
       
 
 - *Create Event (Admin Only)*  
-  - ![1](https://github.com/user-attachments/assets/c8b15a07-a8a4-4a92-8dd0-c09c3269ab44)
+    - *Endpoint:* POST /api/events  
+  - *Request Body:*  
+    json  
+    {  
+      "name": "Cultural Night",  
+      "description": "Experience diverse cultures!",  
+      "date": "2024-12-20",  
+      "time": "18:00",  
+      "location": "Main Hall",  
+      "capacity": 200  
+    }  
+
 
 
 #### *Calendar*  
@@ -173,7 +171,7 @@ The application will be accessible at:
 ---
 
 ### *Postman API Test Screenshots*  
-(Include screenshots of your API tests conducted on Postman, showing successful requests and responses for all endpoints.)  
+ - ![1](https://github.com/user-attachments/assets/c8b15a07-a8a4-4a92-8dd0-c09c3269ab44)
 
 ---
 
@@ -184,4 +182,4 @@ The application will be accessible at:
 
 ---
 
-Feel free to let me know if you need further adjustments or elaborations!
+
