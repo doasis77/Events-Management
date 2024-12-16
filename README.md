@@ -1,70 +1,187 @@
-# Getting Started with Create React App
+# Campus Event Management Hub  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## *Project Name*  
+Campus Event Management Hub  
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## *Project Overview*  
+The *Campus Event Management Hub* is a comprehensive event management system designed for campus communities. It enables students and staff to view and register for events such as workshops, seminars, and club activities. Key features include user registration, event preferences, RSVP functionality, event creation (admin-only), and an interactive calendar view to streamline event organization and participation.  
 
-### `npm start`
+The platform simplifies event management by providing a centralized location for event creation, updates, and participation tracking, ensuring a seamless experience for both organizers and attendees.  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## *Deployment Link*  
+[Campus Event Management Hub - Live](https://events-management-sand.vercel.app/)  
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## *Login Details*  
+- *Test User Account:*  
+  - *Email:* testuser@example.com  
+  - *Password:* password123  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- *Admin Account:*  
+  - *Email:* adminuser@example.com  
+  - *Password:* admin  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## *Feature Checklist*  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### *1. User Registration & Event Preferences (15 Marks)*  
+- [x] User registration and login implemented with secure password encryption.  
+- [x] Users can update their profiles to set preferences for event types (e.g., workshops, cultural events, tech talks).  
+- [x] Preferences are stored and used to filter events for personalized recommendations.  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### *2. Event Listings & RSVP (15 Marks)*  
+- [x] Upcoming events are displayed with detailed information:  
+  - Event Name  
+  - Description  
+  - Date and Time  
+  - Location  
+  - Available Seats  
+- [x] Users can RSVP to events:  
+  - RSVP functionality updates the available seats in real-time.  
+  - The RSVP'd event is stored in the user's profile for easy access.  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### *3. Event Creation (Admin Only) (15 Marks)*  
+- [x] Admins can log in and create events.  
+- [x] Each event has a unique ID and includes:  
+  - Event Name  
+  - Description  
+  - Date and Time  
+  - Location  
+  - Capacity (Maximum attendees)  
+- [x] Admins can update or delete events as necessary.  
 
-## Learn More
+### *4. Event Calendar View (15 Marks)*  
+- [x] Integrated calendar view displays events by date for easy navigation.  
+- [x] Users can filter events based on their preferences or categories.  
+- [x] Clicking on an event within the calendar opens detailed information and RSVP options.  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## *Installation Instructions*  
 
-### Code Splitting
+### *1. Clone the Repository*  
+bash  
+git clone https://github.com/username/campus-event-management.git  
+cd campus-event-management  
+  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### *2. Install Dependencies*  
+Install backend and frontend dependencies using npm or yarn:  
+bash  
+# Backend  
+cd backend  
+npm install  
 
-### Analyzing the Bundle Size
+# Frontend  
+cd ../frontend  
+npm install  
+  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### *3. Set Up Environment Variables*  
+Create a .env file in the backend directory and add the following:  
+plaintext  
+DATABASE_URL=<YourDatabaseConnectionString>  
+PORT=5000  
+JWT_SECRET=<YourJWTSecret>  
+  
 
-### Making a Progressive Web App
+### *4. Initialize the Database*  
+Run database migrations and seed the database with initial data (if required):  
+bash  
+npm run migrate  
+npm run seed  
+  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### *5. Start the Application*  
+Start the backend and frontend servers:  
+bash  
+# Backend  
+cd backend  
+npm start  
 
-### Advanced Configuration
+# Frontend  
+cd ../frontend  
+npm start  
+  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The application will be accessible at:  
+- Backend: http://localhost:5000  
+- Frontend: http://localhost:3000  
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## *API Documentation*  
 
-### `npm run build` fails to minify
+### *Endpoints Overview*  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### *Authentication*  
+- *Register User*  
+  - *Endpoint:* POST /api/auth/register  
+  - *Request Body:*  
+    json  
+    {  
+      "name": "John Doe",  
+      "email": "johndoe@example.com",  
+      "password": "securepassword"  
+    }  
+      
+
+- *Login User*  
+  - *Endpoint:* POST /api/auth/login  
+  - *Request Body:*  
+    json  
+    {  
+      "email": "johndoe@example.com",  
+      "password": "securepassword"  
+    }  
+      
+
+#### *Event Management*  
+- 
+      
+
+- *RSVP for Event*  
+  - *Endpoint:* PATCH /api/events/:id/rsvp  
+  - *Response:*  
+    json  
+    {  
+      "message": "RSVP successful",  
+      "event": {  
+        "id": 1,  
+        "availableSeats": 49  
+      }  
+    }  
+      
+
+- *Create Event (Admin Only)*  
+  - ![1](https://github.com/user-attachments/assets/c8b15a07-a8a4-4a92-8dd0-c09c3269ab44)
+
+
+#### *Calendar*  
+- *Fetch Events by Date*  
+  - *Endpoint:* GET /api/calendar?date=YYYY-MM-DD  
+
+---
+
+### *Postman API Test Screenshots*  
+(Include screenshots of your API tests conducted on Postman, showing successful requests and responses for all endpoints.)  
+
+---
+
+## *Future Improvements*  
+1. *Notifications:* Implement email/SMS reminders for registered events.  
+2. *Event Analytics:* Provide admins with dashboards for attendance statistics.  
+3. *Mobile App Integration:* Extend the platform to Android and iOS for enhanced accessibility.  
+
+---
+
+Feel free to let me know if you need further adjustments or elaborations!
